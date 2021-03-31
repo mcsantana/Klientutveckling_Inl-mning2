@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Varukorg</title>
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+  />
+  <!-- Google Fonts Roboto -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+  />
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  </head>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarExample01"
+        aria-controls="navbarExample01"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarExample01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="index.html"
+              >Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html">Cart</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <body>
+    <div style="margin-top:50px"></div>
+    <h1>Varukorg</h1>
+    <div style="margin-top:50px"></div>
+    <div id="cart-output"></div>
+    <p class="mb-0"><span><strong id="summary"></strong></span></p class="mb-0">
+      <div style="margin-top:100px"></div>
+      <!--check-out formulär-->
+      <form id="contact" action="submitted-order.html" onsubmit="return checkOut(event);"> 
+        <!-- 2 column grid layout with text inputs for the first and last names -->
+        <div class="row mb-4">
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" id="firstname" class="form-control" placeholder="At least 2 characters" />
+              <label class="form-label" for="firstname">First name</label>
+              <span id="alert-firstname" class="alert"></span>
+            </div>
+
+      
+        <!-- Text input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="lastname" class="form-control"  placeholder="At least 3 characters"/>
+          <label class="form-label" for="lastname">Last name</label>
+          <span id="alert-lastname" class="alert"></span>
+        </div>
+      
+        <!-- Text input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="address" class="form-control" placeholder="Input address here.." />
+          <label class="form-label" for="address">Address</label>
+          <span id="alert-address" class="alert"></span>
+        </div>
+
+        <!-- Text input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="phone" class="form-control" placeholder="Input phone number here.." />
+          <label class="form-label" for="phone">Phone</label>
+          <span id="alert-phone" class="alert"></span>
+        </div>
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="email" class="form-control" placeholder="Input email here"/>
+          <label class="form-label" for="email">Email</label>
+          <span id="alert-email" class="alert"></span>
+        </div>
+       <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4" id="btnSubmit">Place order</button>
+      </form>
+       <!-- Copyright -->
+      <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">© 2020 Copyright: Mimi Santana</div>
+      </footer>  
+    <script src="cart-script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+.card{
+flex: 1 0 25%;
+margin: 10px;
+}
+
+#output{
+ display : flex;
+ justify-content : space-between;
+ flex-wrap : wrap;
+}
+
+input[type=text] {
+    border: 2px solid black;
+    border-radius: 4px;
+  }
+
+
